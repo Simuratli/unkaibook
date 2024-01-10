@@ -1,11 +1,12 @@
-.logo{
-    font-size: 24px;
-    margin-top: $bigSpace;
-    padding-left: $middleSpace;
-    span{
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-    }
+.logo {
+  font-size: 24px;
+  width: max-content;
+  position: relative;
+  z-index: 100;
+  span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
 }

@@ -3,6 +3,28 @@
   height: 100%;
   padding: 34px 27px;
   display: flex;
+  width: 100px;
   justify-content: space-between;
   flex-direction: column;
+
+  &__center {
+    li {
+      width: 50px;
+      height: 50px;
+      background: $white;
+      border-radius: 50%;
+      margin: 15px 0;
+      display: grid;
+      place-content: center;
+      cursor: pointer;
+    }
+  }
+
+  &__end {
+    rotate: -90deg;
+  }
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
 }

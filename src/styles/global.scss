@@ -5,20 +5,17 @@
 @import './components/chat.scss';
 @import './components/logo.scss';
 @import './components/navbar.scss';
+@import './components/button.scss';
+@import './components/input.scss';
+
+//containers
+@import './containers/modal.scss';
 
 // pages
 @import './pages/home.scss';
 
 body {
-  background-color: $background;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: $darkBrown;
+  background-color: $white;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -160,4 +157,11 @@ table {
 .home {
   display: flex;
   height: 100vh;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: $darkBrown;
 }

@@ -1,0 +1,39 @@
+.input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 15px 40px;
+  outline: none;
+  border-radius: 32px;
+  color: $darkBrown;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  &__container {
+    background-color: $brown;
+    border-radius: 32px;
+    width: 100%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+
+    @include for-tablet-landscape-up {
+      height: min-content;
+    }
+  }
+
+  &::placeholder {
+    color: $darkBrown;
+  }
+
+  @include for-tablet-landscape-up {
+    padding: 9px 15px;
+    height: min-content;
+    height: 30px;
+  }
+}

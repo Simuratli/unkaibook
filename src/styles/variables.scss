@@ -1,8 +1,48 @@
-$background: #fbf8f6;
+$white: #fbf8f6;
 $brown: #e6dbcd;
-$darkBrown:#917F74;
+$darkBrown: #917f74;
 
+$microSpace: 5px;
+$smallSpace: 15px;
+$middleSpace: 27px;
+$bigSpace: 34px;
 
-$smallSpace:15px;
-$middleSpace:27px;
-$bigSpace:34px;
+@mixin generalButton {
+  border-radius: 32px;
+  padding: 15px 40px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
