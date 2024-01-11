@@ -6,8 +6,10 @@ import { Button } from '@/components';
 import { BUTTON_TYPE } from '@/types/global.types';
 import Alert from '@/assets/alert';
 import Link from 'next/link';
+import { useStore } from '@/zustand';
 
 function Sidebar() {
+  const { setModalOpen } = useStore();
   return (
     <aside className='sidebar'>
       <div className='sidebar__head'></div>
@@ -29,7 +31,14 @@ function Sidebar() {
         </Link>
       </ul>
       <div className='sidebar__end'>
-        <Button type={BUTTON_TYPE.SUBSCRIBE} text='Subscribe' icon={<Alert />} />
+        <Button
+          onClick={() => {
+            setModalOpen(true);
+          }}
+          type={BUTTON_TYPE.SUBSCRIBE}
+          text='Subscribe'
+          icon={<Alert />}
+        />
       </div>
     </aside>
   );

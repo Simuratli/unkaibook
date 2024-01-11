@@ -1,9 +1,9 @@
 import React from 'react';
 import { ButtonPropTypes } from './Button.types';
 
-function Button({ text, type, icon }: ButtonPropTypes) {
+function Button({ text, type, icon, onClick }: ButtonPropTypes) {
   return (
-    <button className={`button ${type}`}>
+    <button onClick={onClick} className={`button ${type}`}>
       {text}
       {icon}
     </button>

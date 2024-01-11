@@ -10,6 +10,16 @@
   z-index: 1000;
   display: grid;
   place-content: center;
+  animation: modalOpener 1s alternate;
+
+  @keyframes modalOpener {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   &__content {
     width: 40vw;
@@ -63,8 +73,7 @@
           font-size: 18px;
         }
       }
-  
-      
+
       input {
         color: $darkBrown;
         font-size: 24px;
