@@ -4,6 +4,7 @@ import { Book } from '@/components';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import { fakeCategories } from './fakeCategories';
+import { FreeMode } from 'swiper/modules';
 
 // import required modules
 import Link from 'next/link';
@@ -32,6 +33,7 @@ function Categories() {
            },
           
          }}
+         modules={[FreeMode]}
          className="mySwiper"
       >
         {fakeCategories.map((category, index) => {
