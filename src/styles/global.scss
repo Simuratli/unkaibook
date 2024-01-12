@@ -7,9 +7,11 @@
 @import './components/navbar.scss';
 @import './components/button.scss';
 @import './components/input.scss';
+@import './components/book.scss';
 
 //containers
 @import './containers/modal.scss';
+@import './containers/categories.scss';
 
 // pages
 @import './pages/home.scss';
@@ -158,6 +160,7 @@ table {
   display: flex;
   height: 100vh;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;

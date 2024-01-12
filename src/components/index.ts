@@ -4,3 +4,4 @@ export { default as Chat } from './Chat';
 export { default as Logo } from './Logo';
 export { default as Button } from './Button';
 export { default as Input } from './Input';
+export { default as Book } from './Book';

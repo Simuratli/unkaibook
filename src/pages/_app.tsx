@@ -9,10 +9,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <div className='home'>
       <Sidebar />
       <ModalsHolder />
-      <>
+      <div className='main'>
         <Navbar />
         <Component {...pageProps} />
-      </>
+      </div>
       {/* <Chat /> */}
     </div>
   );

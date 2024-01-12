@@ -1,0 +1,16 @@
+.book {
+  position: relative;
+  svg {
+    height: 200px;
+    width: 200px;
+  }
+
+  img {
+    position: absolute;
+    height: 165px;
+    width: 134px;
+    left: 43px;
+    object-fit: cover;
+    border-radius: 0px 10px 0px 0px;
+  }
+}
