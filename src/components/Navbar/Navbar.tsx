@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { Logo, Button, Input } from '@/components';
+import { OutsideClickDetector } from '@/containers';
 import Link from 'next/link';
 import { BUTTON_TYPE, INPUT_TYPE } from '@/types/global.types';
 import Search from '@/assets/search';
 import useWindowSize from '@/hooks/useWindowSize';
-
 function Navbar() {
   const [openNav, setOpenNav] = useState(false);
   const { width } = useWindowSize();
+
+  const clickOutside = () => {
+    if (!openNav) {
+      setOpenNav(false);
+    }
+  };
 
   return (
     <nav className='navbar'>
@@ -34,14 +40,15 @@ function Navbar() {
           icon={width <= 900 ? <Search /> : null}
         />
       </div>
-
-      <div className={`navbar__mobile ${openNav && 'open'}`}>
-        <ul>
-          <li>HOME</li>
-          <li>WISHLIST</li>
-          <li>SAVED</li>
-        </ul>
-      </div>
+      <OutsideClickDetector onOutsideClick={clickOutside}>
+        <div className={`navbar__mobile ${openNav && 'open'}`}>
+          <ul>
+            <li>HOME</li>
+            <li>WISHLIST</li>
+            <li>SAVED</li>
+          </ul>
+        </div>
+      </OutsideClickDetector>
     </nav>
   );
 }

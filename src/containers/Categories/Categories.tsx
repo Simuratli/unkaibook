@@ -13,28 +13,27 @@ function Categories() {
   return (
     <div className='categories'>
       <Swiper
-         slidesPerView={4}
-         spaceBetween={10}
-         pagination={{
-           clickable: true,
-         }}
-         breakpoints={{
-           640: {
-             slidesPerView: 5,
-             spaceBetween: 20,
-           },
-           768: {
-             slidesPerView: 12,
-             spaceBetween: 10,
-           },
-           1224: {
-             slidesPerView: 16,
-             spaceBetween: 10,
-           },
-          
-         }}
-         modules={[FreeMode]}
-         className="mySwiper"
+        slidesPerView={4}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 12,
+            spaceBetween: 10,
+          },
+          1224: {
+            slidesPerView: 16,
+            spaceBetween: 10,
+          },
+        }}
+        modules={[FreeMode]}
+        className='mySwiper'
       >
         {fakeCategories.map((category, index) => {
           return (
