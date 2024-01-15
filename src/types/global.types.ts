@@ -5,6 +5,7 @@ export enum BUTTON_TYPE {
   DANGER = 'DANGER',
   SUBSCRIBE = 'SUBSCRIBE',
   LIGHT_GREEN = 'LIGHT_GREEN',
+  VIEW = 'VIEW',
 }
 
 export enum INPUT_TYPE {

@@ -7,6 +7,13 @@
   padding: $bigSpace $middleSpace;
   gap: 40px;
 
+  .outside {
+    display: none;
+    @include for-tablet-landscape-up {
+      display: block;
+    }
+  }
+
   &__search {
     display: flex;
     gap: 40px;

@@ -8,10 +8,13 @@
 @import './components/button.scss';
 @import './components/input.scss';
 @import './components/book.scss';
+@import './components/bannerCard.scss';
+@import './components/footer.scss';
 
 //containers
 @import './containers/modal.scss';
 @import './containers/categories.scss';
+@import './containers/books.scss';
 
 // pages
 @import './pages/home.scss';

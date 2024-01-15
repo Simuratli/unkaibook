@@ -1,0 +1,65 @@
+.bannerCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: $bigSpace;
+  border-radius: 14px;
+  background: $brown;
+  gap: 50px;
+  height: 273px;
+  padding: 0 80px;
+
+  overflow: hidden;
+  @include for-tablet-landscape-up {
+    margin: $bigSpace $smallSpace;
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  img {
+    height: 100% !important;
+    object-position: center center;
+    width: 50% !important;
+    object-fit: cover;
+
+    @include for-tablet-landscape-up {
+      width: 40% !important;
+      height: 50% !important;
+    }
+  
+  }
+
+  &__content {
+    padding: 30px 0;
+    text-align: right;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    h1 {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+
+      @include for-tablet-landscape-up {
+        font-size: 13px;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      width: 50%;
+      text-align: right;
+      line-height: normal;
+      margin-bottom: $smallSpace;
+      @include for-tablet-landscape-up {
+        font-size: 10px;
+        width: 100%;
+      }
+    }
+  }
+}

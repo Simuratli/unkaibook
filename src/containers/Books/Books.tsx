@@ -1,176 +1,202 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Book } from '@/components';
 import 'swiper/css';
 import 'swiper/css/free-mode';
-import { FreeMode } from 'swiper/modules';
 // import required modules
 import Link from 'next/link';
+import Next from '../../assets/next';
+import { type Swiper as SwiperRef } from 'swiper';
 
-function Categories() {
+function Books() {
+  const sliderRef = useRef<SwiperRef | null>(null);
+
   return (
-    <div className='categories'>
+    <div className='books'>
+      <div className='books__header'>
+        <h1>
+          Popular <span>books</span>
+        </h1>
+        <div className='books__header__buttons'>
+          <button
+            onClick={() => {
+              sliderRef.current?.slidePrev();
+            }}
+            className='books__prev'
+          >
+            <Next />
+          </button>
+          <button
+            onClick={() => {
+              sliderRef.current?.slideNext();
+            }}
+            className='books__next'
+          >
+            <Next />
+          </button>
+        </div>
+      </div>
+
       <Swiper
-        slidesPerView={4}
+        slidesPerView={3}
         spaceBetween={10}
-        pagination={{
-          clickable: true,
+        onSwiper={(swiper) => {
+          sliderRef.current = swiper;
         }}
         breakpoints={{
           640: {
-            slidesPerView: 5,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 12,
+            slidesPerView: 4,
             spaceBetween: 10,
           },
           1224: {
-            slidesPerView: 16,
+            slidesPerView: 6,
             spaceBetween: 10,
           },
         }}
-        modules={[FreeMode]}
         className='mySwiper'
       >
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>{' '}
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>{' '}
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>{' '}
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>{' '}
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>{' '}
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>{' '}
         <SwiperSlide>
-          <Link className='categories__card' href='/categories?category=fiction'>
+          <Link className='books__card' href='/books?category=Tolstoy'>
             <Book
               imageUrl={
                 'https://www.designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg'
               }
             />
-            <h1>Fiction</h1>
+            <h1>Tolstoy</h1>
           </Link>
         </SwiperSlide>
       </Swiper>
@@ -178,4 +204,4 @@ function Categories() {
   );
 }
 
-export default Categories;
+export default Books;
