@@ -1,9 +1,4 @@
-.books {
-  margin: $bigSpace;
-  @include for-tablet-landscape-up {
-    margin: $bigSpace $smallSpace;
-  }
-
+.booksCarousel {
   &__header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +11,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+
       span {
         font-size: 16px;
         font-style: normal;
@@ -49,6 +45,7 @@
       font-size: 12px;
       font-style: normal;
       font-weight: 500;
+      width: 155px;
       line-height: normal;
     }
   }

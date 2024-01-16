@@ -10,14 +10,20 @@
 @import './components/book.scss';
 @import './components/bannerCard.scss';
 @import './components/footer.scss';
+@import './components/avatar.scss';
+@import './components/bookCard.scss';
+@import './components/bookBanner.scss';
 
 //containers
 @import './containers/modal.scss';
 @import './containers/categories.scss';
 @import './containers/books.scss';
+@import './containers/books.scss';
 
 // pages
 @import './pages/home.scss';
+@import './pages/books.scss';
+@import './pages/bookPage.scss';
 
 body {
   background-color: $white;
@@ -162,6 +168,11 @@ table {
 .home {
   display: flex;
   height: 100vh;
+}
+.home__container {
+  flex: 1;
+  width: 100%;
+  overflow: auto;
 }
 
 * {

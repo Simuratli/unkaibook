@@ -1,0 +1,59 @@
+.bookPage {
+  margin: $bigSpace;
+  @include for-tablet-landscape-up {
+    margin: $bigSpace $smallSpace;
+  }
+
+  &__content {
+    margin: $bigSpace auto;
+    display: flex;
+    gap: calc($bigSpace * 2);
+
+    @include for-tablet-landscape-up {
+      gap: calc($smallSpace * 2);
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__downloadSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: max-content;
+  }
+
+  &__description {
+    h1 {
+      // margin-bottom: $smallSpace;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      @include for-tablet-landscape-up {
+        font-size: 18px;
+      }
+    }
+    h3 {
+      margin-bottom: $smallSpace;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @include for-tablet-landscape-up {
+        font-size: 14px;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @include for-tablet-landscape-up {
+        font-size: 10px;
+      }
+    }
+  }
+}

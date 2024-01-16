@@ -2,16 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: $bigSpace;
   border-radius: 14px;
   background: $brown;
   gap: 50px;
   height: 273px;
   padding: 0 80px;
+  position: relative;
 
   overflow: hidden;
   @include for-tablet-landscape-up {
-    margin: $bigSpace $smallSpace;
     padding: 0 10px;
     gap: 10px;
   }
@@ -26,7 +25,6 @@
       width: 40% !important;
       height: 50% !important;
     }
-  
   }
 
   &__content {

@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '@/assets/home';
 import Attach from '@/assets/attach';
 import Hearth from '@/assets/hearth';
-import { Button } from '@/components';
+import { Button, Avatar } from '@/components';
 import { BUTTON_TYPE } from '@/types/global.types';
 import Alert from '@/assets/alert';
 import Link from 'next/link';
@@ -12,7 +12,9 @@ function Sidebar() {
   const { setModalOpen } = useStore();
   return (
     <aside className='sidebar'>
-      <div className='sidebar__head'></div>
+      <div className='sidebar__head'>
+        <Avatar />
+      </div>
       <ul className='sidebar__center'>
         <Link href='/'>
           <li>

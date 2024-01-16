@@ -1,6 +1,17 @@
 .categories {
   margin-top: $bigSpace;
-  margin-left: $bigSpace;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $smallSpace;
+    h1 {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
 
   @include for-tablet-landscape-up {
     margin-left: $smallSpace;

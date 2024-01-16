@@ -7,3 +7,6 @@ export { default as Input } from './Input';
 export { default as Book } from './Book';
 export { default as BannerCard } from './BannerCard';
 export { default as Footer } from './Footer';
+export { default as Avatar } from './Avatar';
+export { default as BookCard } from './BookCard';
+export { default as BookBanner } from './BookBanner';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Logo, Button, Input } from '@/components';
 import { OutsideClickDetector } from '@/containers';
 import Link from 'next/link';
@@ -10,10 +10,15 @@ function Navbar() {
   const { width } = useWindowSize();
 
   const clickOutside = () => {
+    console.log(openNav, 'openNav clickOutside');
     if (!openNav) {
       setOpenNav(false);
     }
   };
+
+  useEffect(() => {
+    console.log(openNav, 'openNav');
+  }, [openNav]);
 
   return (
     <nav className='navbar'>
@@ -22,7 +27,8 @@ function Navbar() {
           <Logo />
         </Link>
         <button
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             setOpenNav((prev) => !prev);
           }}
           className={`navbar__menu ${openNav && 'open'}`}

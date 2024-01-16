@@ -9,10 +9,10 @@ function OutsideClickDetector({ children, onOutsideClick }: OutsideClickDetector
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   const handleOutsideClick = (event: MouseEvent) => {
-    event.stopPropagation();
     if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
       onOutsideClick();
     }
+    event.stopPropagation();
   };
 
   useEffect(() => {

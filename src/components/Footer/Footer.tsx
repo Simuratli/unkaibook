@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Footer() {
-  return (
-    <footer className='footer'>Simuratli© - 2024</footer>
-  )
+  return <footer className='footer'>Simuratli© - 2024</footer>;
 }
 
-export default Footer
+export default Footer;
