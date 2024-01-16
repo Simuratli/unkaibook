@@ -3,7 +3,6 @@ import { Button } from '@/components';
 import { BUTTON_TYPE } from '@/types/global.types';
 import Image from 'next/image';
 
-
 function BannerCard() {
   return (
     <div className='bannerCard'>
