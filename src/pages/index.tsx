@@ -4,6 +4,7 @@ import { BannerCard, Quote } from '@/components';
 import { HomePagePropTypes } from '@/types/pageProp.types';
 import { fetchQuotes } from '@/apis/fetchQuotes';
 function Home({ quote }: HomePagePropTypes) {
+
   return (
     <div className='main'>
       {quote && <Quote quote={quote.quote} author={quote.author} />}
