@@ -6,7 +6,7 @@ import { HomePagePropTypes } from '@/types/pageProp.types';
 import axios from 'axios';
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   // const quote = await fetchQuotes();
 
   const category = 'happiness';
