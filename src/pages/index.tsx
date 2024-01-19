@@ -1,7 +1,7 @@
 import React from 'react';
 import { Categories, Books } from '@/containers';
-import { BannerCard, Quote } from '@/components';
-import { HomePagePropTypes } from '@/types/pageProp.types';
+import { BannerCard } from '@/components';
+// import { HomePagePropTypes } from '@/types/pageProp.types';
 // import { fetchQuotes } from '@/apis/fetchQuotes';
 // import axios from 'axios';
 
