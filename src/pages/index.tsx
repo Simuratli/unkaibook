@@ -31,7 +31,7 @@ export const getServerSideProps = (async () => {
   const repo: Repo = await res.json()
   // Pass data to the page via props
   return { props: { repo } }
-}) satisfies GetServerSideProps<{ repo: Repo }>
+})
 
 
 function Home({quote}:HomePagePropTypes) {
