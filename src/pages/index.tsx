@@ -27,17 +27,18 @@ import { HomePagePropTypes } from '@/types/pageProp.types';
 
 export const getServerSideProps = (async () => {
   // Fetch data from external API
-  const res = await fetch('https://api.github.com/repos/vercel/next.js')
-  const repo:any = await res.json()
+  // const res = await fetch('https://api.github.com/repos/vercel/next.js')
+  // const repo:any = await res.json()
   // Pass data to the page via props
-  return { props: { repo } }
+  return { props: { res:'salam' } }
 })
 
 
-function Home({quote}:HomePagePropTypes) {
+function Home({res}: { res:string }) {
+  console.log(res)
   return (
     <div className='main'>
-      {quote && <Quote quote={quote.quote} author={quote.author} />}
+      {/*{quote && <Quote quote={quote.quote} author={quote.author} />}*/}
       <Categories />
       <Books />
       <BannerCard />
