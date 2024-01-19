@@ -2,7 +2,7 @@ import React from 'react';
 import { Categories, Books } from '@/containers';
 import { BannerCard } from '@/components';
 // import { HomePagePropTypes } from '@/types/pageProp.types';
-// import { fetchQuotes } from '@/apis/fetchQuotes';
+import { fetchQuotes } from '@/apis/fetchQuotes';
 // import axios from 'axios';
 
 
@@ -27,7 +27,7 @@ import { BannerCard } from '@/components';
 
 export const getServerSideProps = (async () => {
   // Fetch data from external API
-  // const res = await fetch('https://api.github.com/repos/vercel/next.js')
+  const quote = await fetchQuotes();
   // const repo:any = await res.json()
   // Pass data to the page via props
   return { props: { res:'salam' } }
