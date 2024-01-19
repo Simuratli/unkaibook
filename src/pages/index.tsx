@@ -1,7 +1,7 @@
 import React from 'react';
 import { Categories, Books } from '@/containers';
 import { BannerCard } from '@/components';
-// import { HomePagePropTypes } from '@/types/pageProp.types';
+import { QuoteType } from '@/types/pageProp.types';
 import { fetchQuotes } from '@/apis/fetchQuotes';
 // import axios from 'axios';
 
@@ -27,7 +27,8 @@ import { fetchQuotes } from '@/apis/fetchQuotes';
 
 export const getServerSideProps = (async () => {
   // Fetch data from external API
-  const quote = await fetchQuotes();
+  const quote:QuoteType = await fetchQuotes();
+  console.log(quote)
   // const repo:any = await res.json()
   // Pass data to the page via props
   return { props: { res:'salam' } }
