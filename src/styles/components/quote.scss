@@ -1,0 +1,28 @@
+.quote {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__sign {
+    img {
+      width: clamp(40px, 15vw, 120px);
+    }
+    margin-bottom: $bigSpace;
+  }
+
+  &__text {
+    font-size: clamp(16px, 5vw, 36px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-align: center;
+  }
+
+  &__author {
+    margin-top: $bigSpace;
+    font-size: clamp(12px, 3vw, 24px);
+  }
+}

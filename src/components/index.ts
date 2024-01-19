@@ -10,3 +10,4 @@ export { default as Footer } from './Footer';
 export { default as Avatar } from './Avatar';
 export { default as BookCard } from './BookCard';
 export { default as BookBanner } from './BookBanner';
+export { default as Quote } from './Quote';

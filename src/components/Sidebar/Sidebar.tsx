@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from '@/assets/home';
 import Attach from '@/assets/attach';
-import Hearth from '@/assets/hearth';
+import TextSign from '@/assets/text';
 import { Button, Avatar } from '@/components';
 import { BUTTON_TYPE } from '@/types/global.types';
 import Alert from '@/assets/alert';
@@ -21,12 +21,12 @@ function Sidebar() {
             <Home />
           </li>
         </Link>
-        <Link href='/saved'>
+        <Link href={'/saved'}>
           <li>
-            <Hearth />
+            <TextSign />
           </li>
         </Link>
-        <Link href='/attached'>
+        <Link href={'/attached'}>
           <li>
             <Attach />
           </li>
